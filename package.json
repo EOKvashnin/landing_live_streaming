@@ -1,0 +1,23 @@
+{
+	"name": "less_84-maket-_3",
+	"version": "1.0.0",
+	"description": "Landing page",
+	"source": "index.html",
+	"scripts": {
+		"sass": "sass --style=expanded --watch styles:dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/EOKvashnin/landing_live_streaming.git"
+	},
+	"author": "Evgenie Kvashnin",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/EOKvashnin/landing_live_streaming/issues"
+	},
+	"homepage": "https://github.com/EOKvashnin/landing_live_streaming#readme",
+	"devDependencies": {
+		"parcel": "^2.14.4",
+		"sass": "^1.86.3"
+	}
+}
