@@ -119,6 +119,8 @@
 			@include m.d-flex(start, center, nowrap, column, 0, 0);
 
 			&-img {
+				width: 126px;
+				height: 198px;
 				@include m.position(absolute, 1, -1, top, left, -40px, -25px);
 			}
 
