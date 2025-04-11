@@ -1,0 +1,226 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+.about-section {
+	padding: 140px 0 0 0;
+
+	.about {
+		margin: 0 auto;
+		@include m.d-flex(start, center, wrap, column, 0, 130px);
+
+		&__quality {
+			width: 100%;
+			height: 400px;
+			padding: 0 0 0 15px;
+			margin-bottom: 30px;
+			background: url(../assets/laptop.png) 98% / contain no-repeat;
+
+			&-title {
+				@include m.font(45px, 400, v.$color-white);
+			}
+
+			&-desc {
+				max-width: 590px;
+				margin: 20px 0 0 0;
+				@include m.font(20px, 300, v.$color-white);
+			}
+
+			@media (max-width: v.$media_xl) {
+				background: linear-gradient(
+						0deg,
+						rgba(103, 143, 242, 0) 0%,
+						rgba(103, 143, 242, 0.95) 76%
+					),
+					url(../assets/laptop.png) 98% 45%/ 500px no-repeat;
+			}
+
+			@media (max-width: v.$media_md) {
+				background: url(../assets/laptop.png) 90% 100%/ 450px no-repeat;
+
+				&-title {
+					@include m.font(35px, 400, v.$color-white);
+				}
+
+				&-desc {
+					max-width: 500px;
+					margin: 20px 0 0 0;
+					@include m.font(16px, 300, v.$color-white);
+				}
+			}
+
+			@media (max-width: v.$media_sn) {
+				background: url(../assets/laptop.png) 260px 100%/ 380px no-repeat;
+
+				&-desc {
+					max-width: 380px;
+				}
+			}
+		}
+
+		&__touch {
+			@include m.d-flex(end, end, nowrap, column, 0, 20px);
+			position: relative;
+			width: 100%;
+			height: 500px;
+			padding: 0 15px 0 15px;
+
+			&::before {
+				content: '';
+				@include m.position(absolute, -1, -1, top, left, 30px, -360px);
+				width: 100%;
+				height: 100%;
+				background: url(../assets/old_phone.png) 0 0 / contain no-repeat;
+				rotate: 15deg;
+			}
+
+			&-title {
+				@include m.font(45px, 400, v.$color-white);
+			}
+
+			&-desc {
+				max-width: 480px;
+				line-height: 1.4;
+				text-align: right;
+				margin: 5px 0 0 0;
+				@include m.font(20px, 300, v.$color-white);
+			}
+
+			@media (max-width: v.$media_xl) {
+				&::before {
+					@include m.position(absolute, -1, -1, top, left, 30px, -253px);
+					rotate: 19deg;
+				}
+
+				&-desc {
+					max-width: 400px;
+					line-height: 1.4;
+					text-align: right;
+					margin: 0 0 0 0;
+					@include m.font(19px, 300, v.$color-white);
+				}
+			}
+
+			@media (max-width: v.$media_l) {
+				height: 450px;
+				&::before {
+					@include m.position(absolute, -1, -1, top, left, 30px, -367px);
+					rotate: 20deg;
+				}
+			}
+
+			@media (max-width: v.$media_md) {
+				height: 360px;
+				@include m.d-flex(start, end, nowrap, column, 0, 20px);
+
+				&-title {
+					@include m.font(35px, 400, v.$color-white);
+				}
+
+				&-desc {
+					max-width: 360px;
+					@include m.font(16px, 300, v.$color-white);
+				}
+
+				&::before {
+					@include m.position(absolute, -1, -1, top, left, 100px, -181px);
+					rotate: 52deg;
+					background: url(../assets/old_phone.png) 0 0 / 80% no-repeat;
+				}
+			}
+
+			@media (max-width: v.$media_sn) {
+				height: 360px;
+
+				&-title {
+					@include m.font(35px, 400, v.$color-white);
+				}
+
+				&-desc {
+					@include m.font(16px, 300, v.$color-white);
+				}
+				&::before {
+					@include m.position(absolute, -1, -1, top, left, 115px, -160px);
+					rotate: 54deg;
+					background: url(../assets/old_phone.png) 0 0 / 80% no-repeat;
+				}
+			}
+
+			@media (max-width: v.$media_min) {
+				height: 330px;
+
+				&::before {
+					@include m.position(absolute, -1, -1, top, left, 172px, -160px);
+					rotate: 59deg;
+				}
+			}
+		}
+
+		&__approach {
+			width: 100%;
+			height: 800px;
+			padding: 0 0 15px 0;
+			// margin-top: 140px;
+			background: url(../assets/Cactus.png) 98% 100% / contain no-repeat;
+
+			&-title {
+				margin: 250px 0 0 0;
+				@include m.font(45px, 400, v.$color-white);
+			}
+
+			&-desc {
+				max-width: 730px;
+				margin: 30px 0 0 0;
+				@include m.font(20px, 300, v.$color-white);
+			}
+
+			@media (max-width: v.$media_l) {
+				height: 500px;
+
+				&-title {
+					padding: 0 0 0 15px;
+					@include m.font(45px, 400, v.$color-white);
+				}
+
+				&-desc {
+					padding: 0 0 0 15px;
+					max-width: 550px;
+					@include m.font(16px, 300, v.$color-white);
+				}
+			}
+			@media (max-width: v.$media_md) {
+				height: 600px;
+				background: url(../assets/Cactus.png) 117% 100% / 48% no-repeat;
+
+				&-title {
+					margin: 0px 0 0 0;
+					padding: 0 0 0 15px;
+					@include m.font(45px, 400, v.$color-white);
+				}
+
+				&-desc {
+					padding: 0 0 0 15px;
+					max-width: 350px;
+					@include m.font(16px, 300, v.$color-white);
+				}
+			}
+			@media (max-width: v.$media_min) {
+				height: 550px;
+				background: url(../assets/Cactus.png) 100% 100% / 66% no-repeat;
+
+				&-title {
+					margin: 0px 0 0 0;
+					padding: 0 0 0 15px;
+					@include m.font(35px, 400, v.$color-white);
+				}
+
+				&-desc {
+					padding: 0 0 0 15px;
+					max-width: 350px;
+					@include m.font(16px, 300, v.$color-white);
+				}
+			}
+		}
+	}
+}
