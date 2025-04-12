@@ -1,0 +1,39 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+@use 'placeholders';
+@use 'sass:color';
+
+.expirience {
+	max-width: 1300px;
+	padding: 180px 0;
+	margin: 0 auto;
+	text-align: center;
+	@include m.d-flex(start, center, nowrap, column, 0, 90px);
+
+	&__title {
+		@include m.font(60px, 400, v.$color-white);
+
+		@media (max-width: v.$media-sn) {
+			@include m.font(35px, 400, v.$color-white);
+		}
+	}
+
+	&__card-wrapper {
+		@include m.d-flex(space-around, center, wrap, row, 20px, 55px);
+		width: 100%;
+		padding: 0 15px;
+	}
+
+	@media (max-width: v.$media_xl) {
+		padding: 130px 0;
+	}
+	@media (max-width: v.$media_l) {
+		padding: 100px 0;
+	}
+	@media (max-width: v.$media_md) {
+		padding: 80px 0;
+	}
+	@media (max-width: v.$media_min) {
+		padding: 60px 0;
+	}
+}
