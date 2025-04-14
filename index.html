@@ -35,7 +35,7 @@
 							>COVID-19 UPDATE</a
 						>
 					</div>
-					<div class="nav___globe-wrapper globe" aria-label="globe img">
+					<div class="nav__globe-wrapper globe" aria-label="globe img">
 						<a href="#" class="globe__link">
 							<svg class="globe__link-icon" aria-label="globe link">
 								<use href="assets/sprites.svg#globe-icon"></use>
@@ -45,6 +45,47 @@
 				</nav>
 			</div>
 		</header>
+		<div class="mobile-navigation">
+			<label for="checkboxID" class="mobile-navigation__burger">
+				<svg class="mobile-navigation__burger-icon" aria-label="burger icon">
+					<use href="assets/sprites.svg#burger-icon"></use>
+				</svg>
+			</label>
+
+			<input  id="checkboxID" type="checkbox" class="mobile-navigation__toggler">
+
+			<nav class="mobile-navigation__menu nav">
+				<ul class="nav__list">
+					<li class="nav__list-item">
+						<a href="#workID" class="nav__list-item-link">How we work</a>
+					</li>
+					<li class="nav__list-item">
+						<a href="#aboutID" class="nav__list-item-link">About us</a>
+					</li>
+					<li class="nav__list-item">
+						<a href="#expirienceID" class="nav__list-item-link">Our experience</a>
+					</li>
+					<li class="nav__list-item">
+						<a href="#testimonialsID" class="nav__list-item-link">Testimonials</a>
+					</li>
+					<li class="nav__list-item">
+						<a href="#formID" class="nav__list-item-link">Form</a>
+					</li>
+					<li class="nav__list-item">
+						<a href="#contacts" class="nav__list-item-link">Contacts</a>
+					</li>
+				</ul>
+				<label for="checkboxID" class="nav__close">
+					<svg class="nav__close-icon" aria-label="close icon">
+						<use href="assets/sprites.svg#cross-icon"></use>
+					</svg>
+				</label>
+			
+			</nav>
+
+			
+
+		</div>
 		<main aria-label="main content">
 			<section class="hero__section" aria-label="hero section">
 				<div class="container">
@@ -71,7 +112,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="work-section" aria-label="work-section">
+			<section class="work-section" id="workID" aria-label="work-section">
 				<div class="container">
 					<div class="work">
 						<h2 class="work__title">How we work</h2>
@@ -125,7 +166,7 @@
 
 			</section>
 			<hr class="devider">
-			<section class="about-section" aria-label="about section">
+			<section class="about-section" id="aboutID" aria-label="about section">
 				<div class="container">
 					<div class="about">
 						<div class="about__quality">
@@ -152,7 +193,7 @@
 				</div>
 
 			</section>
-			<section class="expirience" aria-label="expirience section">
+			<section class="expirience" id="expirienceID" aria-label="expirience section">
 				<div class="container">
 					<div class="expirience">
 						<h2 class="expirience__title">Our experience</h2>
@@ -191,7 +232,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="testimonials-section" aria-label="testimonials section" id="testimonials">
+			<section class="testimonials-section" id="testimonialsID" aria-label="testimonials section">
             <div class="container">
                 <div class="testimonials">
                     <h2 class="testimonials__title">
@@ -234,7 +275,7 @@
                 </div>
             </div>
         </section>
-		<section class="form-section" aria-label="form section" id="formSection">
+		<section class="form-section" id="formID" aria-label="form section">
             <div class="container">
                 <div class="form-section__wrapper">
                     <form action="mailto:streaming_compony@mail.ru" class="form" aria-labelledby="form-title">
