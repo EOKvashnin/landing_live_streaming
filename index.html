@@ -438,5 +438,22 @@
 				</div>
 			</div>
 		</footer>
+		<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Находим чекбокс
+    const toggler = document.getElementById('checkboxID');
+    // Находим все ссылки внутри мобильного меню
+    const navLinks = document.querySelectorAll('.mobile-navigation__menu .nav__list-item-link');
+
+    // Для каждой ссылки добавляем обработчик события
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        // При клике по ссылке "снимаем галочку" с чекбокса
+        toggler.checked = false;
+        // Меню закроется, так как CSS-правило для :checked перестанет действовать
+      });
+    });
+  });
+</script>
 	</body>
 </html>
